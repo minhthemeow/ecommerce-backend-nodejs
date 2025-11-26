@@ -1,9 +1,10 @@
 'use strict'
 
 const mongoose = require('mongoose')
+const { db: {host, port, name}} = require('../configs/config.mongodb')
 
-const connectStr = `mongodb://localhost:27017/shopDEV`
-
+const connectStr = `mongodb://${host}:${port}/${name}`
+console.log(connectStr)
 
 //apply singleton design pattern
 class Database {
