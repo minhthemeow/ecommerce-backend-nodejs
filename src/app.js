@@ -13,7 +13,9 @@ app.use(helmet())
 //Tối ưu hiệu suất (nén dữ liệu): 
 app.use(compression())
 // init database
-
+require('./dbs/init.mongodb')
+const {countConnect, checkOverload} = require('./helpers/check.connect')
+checkOverload()
 // init routes
 app.get('/', (req, res, next) => {
     const strCmprs = "nicetry";
