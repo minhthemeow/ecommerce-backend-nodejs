@@ -35,6 +35,6 @@ const configProduct = {
     }
 }
 const config = {configDev, configProduct}
-const env = process.env.EXAMPLE || 'configDev'
+const env = process.env.EXAMPLE || 'configProduct'
 console.log(config[env], env)
 module.exports = config[env]
