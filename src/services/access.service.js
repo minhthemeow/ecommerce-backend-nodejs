@@ -86,6 +86,7 @@ class AccessService {
                 }
 
         } catch (error) {
+            console.error(error)
             return {
                 code: 'xxx',
                 message: error.message,
